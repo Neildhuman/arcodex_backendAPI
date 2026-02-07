@@ -1,0 +1,827 @@
+{
+	"info": {
+		"_postman_id": "8401ed52-fc0f-4cec-83c3-1afaf70c5d95",
+		"name": "capstone2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30976379"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzRiMWYyMjM3YmY2OTg2MjZjZjIzNyIsImVtYWlsIjoibmVpbGxlb25hcmRhQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDc2NTUwMjh9.twSOxeRrKo6My5a843unNcyFtAz5GSSKahCMRV-Iwq4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/users/details",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"users",
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"Customer\",\r\n    \"lastName\" : \"Account\",\r\n    \"email\" : \"customer@mail.com\",\r\n    \"mobileNo\" : \"09123456789\",\r\n    \"password\" : \"customer123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/users/",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"roxanne.valencia001@deped.gov.ph\",\r\n    \"password\": \"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/users/login",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setAsAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBlNmFhNmU2MjczZjAwM2QyOGNlOCIsImVtYWlsIjoianNtaXRoQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA3NzM1NjkxfQ.eDqLzP_u74hSbmpzSW-IYnvrk5tbJmlKNNiR2rapgQk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/users/65c8d17b58a5dc07789c00d5/set-as-admin",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"users",
+								"65c8d17b58a5dc07789c00d5",
+								"set-as-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzhkMTdiNThhNWRjMDc3ODljMDBkNSIsImVtYWlsIjoibmxhY3VuYTEyM0BnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3NjYxNzE4fQ.SRswKxHqfBkzUl5vfd3jv9F4_zOYo26UgqezxfkJrwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"kalostropi123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/users/update-password",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"users",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "createProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzhkMTdiNThhNWRjMDc3ODljMDBkNSIsImVtYWlsIjoibmxhY3VuYTEyM0BnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MDc3MzU3NDB9.vD93eP36V-c4597jDj2_knn1uWgTwuf4F-7_a4MZ3Vs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"iPhone 6s\",\r\n        \"description\": \"Patapon\",\r\n        \"price\": 2500,\r\n        \"stock\": 20\r\n    },\r\n    {\r\n        \"name\": \"iPhone 4s\",\r\n        \"description\": \"Phaseout\",\r\n        \"price\": 10000,\r\n        \"stock\": 20\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/products/",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/products/all",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"products",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActiveProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBlNmFhNmU2MjczZjAwM2QyOGNlOCIsImVtYWlsIjoianNtaXRoQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA3MjEzODQ3fQ.IAulnshp8uhcaGqI9xaQ09Zb5J32NddcfFUg_oOrIhM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/products/active",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"products",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSpecificProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBlNmFhNmU2MjczZjAwM2QyOGNlOCIsImVtYWlsIjoianNtaXRoQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA3MjEzODQ3fQ.IAulnshp8uhcaGqI9xaQ09Zb5J32NddcfFUg_oOrIhM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/products/65c20fbcead87c291906a171",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"products",
+								"65c20fbcead87c291906a171"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBlNmFhNmU2MjczZjAwM2QyOGNlOCIsImVtYWlsIjoianNtaXRoQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA3MjIwNTcwfQ.kX91itpd3AMCLvc4-6V61gj3dgFPq1XK-OzOMEUk0HM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Full body Massage\",\r\n    \"description\": \"Mag relax habang buhay pa\",\r\n    \"price\": 10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/products/65c20573b7f1abfa3dfd931c",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"products",
+								"65c20573b7f1abfa3dfd931c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "archiveProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBlNmFhNmU2MjczZjAwM2QyOGNlOCIsImVtYWlsIjoianNtaXRoQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA3MjIwNTcwfQ.kX91itpd3AMCLvc4-6V61gj3dgFPq1XK-OzOMEUk0HM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/products/archive/65c20fbcead87c291906a171",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"products",
+								"archive",
+								"65c20fbcead87c291906a171"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBlNmFhNmU2MjczZjAwM2QyOGNlOCIsImVtYWlsIjoianNtaXRoQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA3MjIwNTcwfQ.kX91itpd3AMCLvc4-6V61gj3dgFPq1XK-OzOMEUk0HM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Full body Massage\",\r\n    \"description\": \"Mag relax habang buhay pa\",\r\n    \"price\": 10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/products/activate/65c20fbcead87c291906a171",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"products",
+								"activate",
+								"65c20fbcead87c291906a171"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchByPrice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"minPrice\": 100,\r\n    \"maxPrice\": 10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/products/searchByPrice",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"products",
+								"searchByPrice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchByName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Katol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/products/searchByName",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"products",
+								"searchByName"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "getCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzlmMWQ2ZDFiYzAyNDZmMjY3MDk5NyIsImVtYWlsIjoicm94YW5uZS52YWxlbmNpYTAwMUBkZXBlZC5nb3YucGgiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3ODE3OTk3fQ.wUdkMNPqXKNyD1_ShNo-oWKBIK-eCHvtBkv-BAML6FM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{caps2}}/b3/cart/",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addtoCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzlmMWQ2ZDFiYzAyNDZmMjY3MDk5NyIsImVtYWlsIjoicm94YW5uZS52YWxlbmNpYTAwMUBkZXBlZC5nb3YucGgiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3ODE3OTk3fQ.wUdkMNPqXKNyD1_ShNo-oWKBIK-eCHvtBkv-BAML6FM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cartItems\": [\r\n    { \"productId\": \"65ca01dbafdc8272c18750c0\", \"quantity\": 2 },\r\n    { \"productId\": \"65ca01dbafdc8272c18750c2\", \"quantity\": 1 },\r\n    { \"productId\": \"65ca01dbafdc8272c18750c6\", \"quantity\": 1 }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/cart/addToCart",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"cart",
+								"addToCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateItemQuantity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBlNmFhNmU2MjczZjAwM2QyOGNlOCIsImVtYWlsIjoianNtaXRoQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA3MzE0NTQ1fQ.84JcKLPm-Qy2tgmvMX8qkDzcQd5UpxBumbn4lIH4Nv0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {   \r\n        \"productId\": \"65c20573b7f1abfa3dfd931c\",\r\n        \"quantity\": 100\r\n    },\r\n    {   \r\n        \"productId\": \"65c20fbcead87c291906a171\",\r\n        \"quantity\": 50\r\n    },\r\n    {   \r\n        \"productId\": \"65c3699a6dc369f42a96bd8b\",\r\n        \"quantity\": 10000\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/cart/updateQuantity",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"cart",
+								"updateQuantity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBlNmFhNmU2MjczZjAwM2QyOGNlOCIsImVtYWlsIjoianNtaXRoQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA3MzE0NTQ1fQ.84JcKLPm-Qy2tgmvMX8qkDzcQd5UpxBumbn4lIH4Nv0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{caps2}}/b3/cart/65c20573b7f1abfa3dfd931c,65c20fbcead87c291906a171/removeFromCart",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"cart",
+								"65c20573b7f1abfa3dfd931c,65c20fbcead87c291906a171",
+								"removeFromCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clearCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzhkMTdiNThhNWRjMDc3ODljMDBkNSIsImVtYWlsIjoibmxhY3VuYTEyM0BnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3NzM4NTU1fQ.ILCa3dIeL7pfaynI7dNJObcbCetlMjd7l6aSemLaABo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{caps2}}/b3/cart/clearCart",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"cart",
+								"clearCart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "userCheckout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzlmMWQ2ZDFiYzAyNDZmMjY3MDk5NyIsImVtYWlsIjoicm94YW5uZS52YWxlbmNpYTAwMUBkZXBlZC5nb3YucGgiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3ODE3OTk3fQ.wUdkMNPqXKNyD1_ShNo-oWKBIK-eCHvtBkv-BAML6FM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"selectAll\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{caps2}}/b3/order/checkout",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"order",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userCheckoutAllItems",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzhkMTdiNThhNWRjMDc3ODljMDBkNSIsImVtYWlsIjoibmxhY3VuYTEyM0BnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3NzQwMTg1fQ.f69FTWhvKTTasz-wOi4GY5mSjxit2MTFN0L1CrrITpI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{caps2}}/b3/order/checkoutAll",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"order",
+								"checkoutAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllOrders - Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzRiMWYyMjM3YmY2OTg2MjZjZjIzNyIsImVtYWlsIjoibmVpbGxlb25hcmRhQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNzc0MTM0OX0.AJC6BtfPwztXy_Sy88ACyB1bfcKVjAvToEf_DjCzcrg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{caps2}}/b3/order/all-orders",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"order",
+								"all-orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMyOrders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzhkMTdiNThhNWRjMDc3ODljMDBkNSIsImVtYWlsIjoibmxhY3VuYTEyM0BnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3NzQwMTg1fQ.f69FTWhvKTTasz-wOi4GY5mSjxit2MTFN0L1CrrITpI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{caps2}}/b3/order/my-orders",
+							"host": [
+								"{{caps2}}"
+							],
+							"path": [
+								"b3",
+								"order",
+								"my-orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "http://localhost:4000"
+		},
+		{
+			"key": "cap2",
+			"value": "http://ec2-3-23-95-145.us-east-2.compute.amazonaws.com/"
+		},
+		{
+			"key": "caps2",
+			"value": "http://ec2-3-23-95-145.us-east-2.compute.amazonaws.com"
+		}
+	]
+}
